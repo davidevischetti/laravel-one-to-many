@@ -7,11 +7,14 @@ use App\Traits\Slugger;
 
 class Category extends Model
 {
+
+    // protected $table = 'categories';
+
     use Slugger;
 
     public $timestamps = false;
 
     public function post() {
-        return $this->hesMany('App/Models/Post');
+        return $this->hasMany('App/Models/Post');
     }
 }

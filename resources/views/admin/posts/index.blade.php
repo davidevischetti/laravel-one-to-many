@@ -12,7 +12,7 @@
             <th scope="col">ID</th>
             <th scope="col">Slug</th>
             <th scope="col">Title</th>
-
+            <th scope="col">Category</th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +21,11 @@
                 <td>{{$post->id}}</td>
                 <td>{{$post->slug}}</td>
                 <td>{{$post->title}}</td>
+                {{-- @php
+                $postCategory = $post->category()->first()
+            @endphp
+
+            <td>{{$postCategory ? ($postCategory->name ?: '__________') : '__________'}}</td> --}}
             </tr>
             @endforeach
         </tbody>
